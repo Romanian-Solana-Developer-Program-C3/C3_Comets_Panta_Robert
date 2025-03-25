@@ -27,5 +27,5 @@ npx tsx transfer-tokens.ts
 This command mints additional tokens to an associated token account.
 
 ```bash
-npx tsx mini-tokens.ts
+npx tsx mint-tokens.ts
 ```
