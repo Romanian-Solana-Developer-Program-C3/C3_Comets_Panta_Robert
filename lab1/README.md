@@ -30,4 +30,4 @@ This command sends SOL from one account to another. To complete the transfer, pr
 npx tsx send.ts -- <recipient-public-key>
 ```
 
-Replace <recipient-public-key> with the actual public key of the recipient's Solana account.
+Replace '<recipient-public-key>' with the actual public key of the recipient's Solana account.
