@@ -1,7 +1,7 @@
 # Laboratory 3
 # Solana Transaction Scripts
 
-This repository contains TypeScript scripts to interact with the Solana blockchain, including uploading NFT images, creating NFT metadata, and minting NFTs.
+This repository contains TypeScript scripts to interact with the Solana blockchain, including uploading NFT images, NFT metadata and creating NFTs.
 
 ## Commands
 
