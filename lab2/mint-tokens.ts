@@ -8,7 +8,7 @@ import {
   
   import { getOrCreateAssociatedTokenAccount } from "@solana/spl-token";
   
-  const MINT = new PublicKey("2ZvKo6vHjAcJeHpr6EzzWqCYm2BZYngWYhbyDT5v5fy7");
+  const MINT = new PublicKey("7fv1iZ48FZfccWM6Eybao48SE1fqzZ1zw2WeCzMBhsaa");
   
   async function mintToken(amount: number, mint: PublicKey) {
     console.log(`Minting token ${mint.toBase58()}...`);
@@ -16,30 +16,18 @@ import {
     const connection = new Connection(clusterApiUrl("devnet"));
     const kp = getKeypairFromEnvironment("SECRET_KEY");
   
-    // Try to get or create the associated token account
-    let ata;
-    try {
-      ata = await getOrCreateAssociatedTokenAccount(
-        connection,
-        kp,
-        mint,
-        kp.publicKey
-      );
-      console.log("Associated Token Account created/found:", ata.address.toBase58());
-    } catch (error) {
-      console.error("Error getting/creating associated token account:", error);
-      return;
-    }
+    const ata = await getOrCreateAssociatedTokenAccount(
+      connection,
+      kp,
+      mint,
+      kp.publicKey,
+    );
   
-    // Proceed with minting tokens
-    try {
-      const sig = await mintTo(connection, kp, mint, ata.address, kp, amount);
-      const link = getExplorerLink("tx", sig, "devnet");
-      console.log(`✅ Done with link: ${link}`);
-    } catch (error) {
-      console.error("Error minting token:", error);
-    }
+    const sig = await mintTo(connection, kp, mint, ata.address, kp, amount);
+  
+    const link = getExplorerLink("tx", sig, "devnet");
+  
+    console.log(`✅ Done with link: ${link}`);
   }
   
   mintToken(10 * 10 ** 9, MINT);
-  
