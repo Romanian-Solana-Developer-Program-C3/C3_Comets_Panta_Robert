@@ -1,3 +1,4 @@
+# Laboratory 1
 # Solana Transaction Scripts
 
 This repository contains TypeScript scripts to interact with the Solana blockchain, including generating keypairs, checking balances, and sending SOL between accounts.
