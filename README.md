@@ -1,8 +1,8 @@
 #  ☄️C3 Comets Panța Robert☄️
 
 ## Table of Contents 📑
-1. [**Introduction**](#introduction-)
-2. [**Laboratory 1: Transactions**](#laboratory-1-)
+**1.** [**Introduction**](#introduction-)
+**2.** [**Laboratory 1: Transactions**](#laboratory-1-)
 3. [**Laboratory 2: Tokens**](#laboratory-2-)
 4. [**Laboratory 3: NFTs**](#laboratory-3-)
 5. [**Laboratory 4: RUST**](#laboratory-4-)
