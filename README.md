@@ -2,10 +2,10 @@
 
 ## Table of Contents 📑
 1. [**Introduction**](#introduction-)
-2. [Laboratory 1](#laboratory-1-)
-3. [Laboratory 2](#laboratory-2-)
-4. [Laboratory 3](#laboratory-3-)
-5. [Laboratory 4](#laboratory-4-)
+2. [**Laboratory 1**](#laboratory-1-)
+3. [**Laboratory 2**](#laboratory-2-)
+4. [**Laboratory 3**](#laboratory-3-)
+5. [**Laboratory 4**](#laboratory-4-)
 
 ## Introduction 📚
 This repository contains TypeScript, Rust and Anchor scripts to interact with the Solana blockchain.
