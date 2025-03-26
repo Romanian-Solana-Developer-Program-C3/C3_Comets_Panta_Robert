@@ -8,7 +8,7 @@
 5. [Laboratory 4](#laboratory-4-)
 
 ## Introduction 📚
-This repository contains TypeScript and Rust scripts to interact with the Solana blockchain.
+This repository contains TypeScript, Rust and Anchor scripts to interact with the Solana blockchain.
 
 ## Laboratory 1 🚀
 ### Solana Transaction Scripts
