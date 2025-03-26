@@ -32,7 +32,7 @@ This section covers fundamental operations on the Solana blockchain, such as gen
 ### Solana Token Management
 This section explores creating token mints, minting tokens, and transferring SPL tokens on Solana.
 
-### Commands 🎯
+### Commands 🛠️
 - **Create Token Mint** 🏦
   ```sh
   npx esrun create-token-mint.ts
@@ -50,7 +50,7 @@ This section explores creating token mints, minting tokens, and transferring SPL
 ### NFT Creation on Solana
 This section details uploading NFT images, metadata, and minting NFTs on Solana.
 
-### Commands 🎭
+### Commands 🛠️
 - **Upload NFT Image** 🖼️
   ```sh
   npx esrun nft-image.ts
