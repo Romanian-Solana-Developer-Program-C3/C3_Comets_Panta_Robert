@@ -10,7 +10,7 @@
 ## Introduction 📚
 This repository contains TypeScript and Rust scripts to interact with the Solana blockchain.
 
-## Laboratory 1 🚀
+## Laboratory 1
 ### Solana Transaction Scripts
 This section covers fundamental operations on the Solana blockchain, such as generating keypairs, checking balances, and sending SOL between accounts.
 
