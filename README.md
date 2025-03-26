@@ -1,11 +1,11 @@
 #  ☄️C3 Comets Panța Robert☄️
 
 ## Table of Contents 📑
-1. [Introduction](#introduction)
+1. [Introduction](#introduction-)
 2. [Laboratory 1](#laboratory-1-)
-3. [Laboratory 2](#laboratory-2)
-4. [Laboratory 3](#laboratory-3)
-5. [Laboratory 4](#laboratory-4)
+3. [Laboratory 2](#laboratory-2-)
+4. [Laboratory 3](#laboratory-3-)
+5. [Laboratory 4](#laboratory-4-)
 
 ## Introduction 📚
 This repository contains TypeScript and Rust scripts to interact with the Solana blockchain.
