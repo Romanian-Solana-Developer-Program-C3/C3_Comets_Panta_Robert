@@ -13,6 +13,12 @@ Use this command to generate a new Solana keypair and save it to a specified fil
 npx tsx generate-keypair.ts
 ```
 
+<p align="center">
+  <img src="ex1.png" alt="Ex1: " width="500">
+  <br>
+  <em>Ex1: </em>
+</p>
+
 ### 2. Check Balance
 
 This command checks the balance of a Solana account by providing its public key.
@@ -23,6 +29,12 @@ npx esrun check-balance.ts <public-key>
 
 Replace public-key with the actual public key of the Solana account.
 
+<p align="center">
+  <img src="ex2.png" alt="Ex2: " width="500">
+  <br>
+  <em>Ex2: </em>
+</p>
+
 ### 3. Send SOL
 
 This command sends SOL from one account to another. To complete the transfer, provide the recipient's public key.
@@ -32,3 +44,9 @@ npx tsx transfer-sol.ts <recipient-public-key>
 ```
 
 Replace recipient-public-key with the actual public key of the recipient's Solana account.
+
+<p align="center">
+  <img src="ex3.png" alt="Ex3: " width="500">
+  <br>
+  <em>Ex3: </em>
+</p>
