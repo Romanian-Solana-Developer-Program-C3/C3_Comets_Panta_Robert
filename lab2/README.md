@@ -12,13 +12,14 @@ Use this command to create a new token mint on the Solana blockchain.
 ```bash
 npx esrun create-token-mint.ts
 ```
-This script initializes a new SPL token mint and returns an explorer link to verify the mint.
 
 <p align="center">
   <img src="ex1.png" alt="Ex1: Create Token Mint" width="800">
   <br>
   <em>Ex1: Create Token Mint</em>
 </p>
+
+This script initializes a new SPL token mint and returns an explorer link to verify the mint.
 
 ```bash
 solana account <new-address-from-the-link-generated>
@@ -29,7 +30,6 @@ solana account <new-address-from-the-link-generated>
   <br>
   <em>Ex1.1: Check Token Details</em>
 </p>
-
 
 ### 2. Mint Tokens
 

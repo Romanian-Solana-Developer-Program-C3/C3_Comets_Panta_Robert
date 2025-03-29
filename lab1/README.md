@@ -27,13 +27,13 @@ This command checks the balance of a Solana account by providing its public key.
 npx esrun check-balance.ts <public-key>
 ```
 
-Replace public-key with the actual public key of the Solana account.
-
 <p align="center">
   <img src="ex2.png" alt="Ex2: Check Balance" width="800">
   <br>
   <em>Ex2: Check Balance</em>
 </p>
+
+Replace public-key with the actual public key of the Solana account.
 
 ### 3. Send SOL
 
@@ -43,10 +43,10 @@ This command sends SOL from one account to another. To complete the transfer, pr
 npx tsx transfer-sol.ts <recipient-public-key>
 ```
 
-Replace recipient-public-key with the actual public key of the recipient's Solana account.
-
 <p align="center">
   <img src="ex3.png" alt="Ex3: Send SOL" width="800">
   <br>
   <em>Ex3: Send SOL</em>
 </p>
+
+Replace recipient-public-key with the actual public key of the recipient's Solana account.
