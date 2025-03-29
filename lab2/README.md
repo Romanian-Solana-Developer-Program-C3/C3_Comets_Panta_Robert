@@ -64,7 +64,7 @@ spl-token display <token-address>
 ```
 
 <p align="center">
-  <img src="ex3.1.png" alt="Ex3.1: Check SPL Token Details" width="800">
+  <img src="ex31.png" alt="Ex3.1: Check SPL Token Details" width="800">
   <br>
   <em>Ex3.1: Check SPL Token Details</em>
 </p>
