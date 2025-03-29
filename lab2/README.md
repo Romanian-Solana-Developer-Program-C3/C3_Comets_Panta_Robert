@@ -39,6 +39,12 @@ This command mints additional tokens to an associated token account.
 npx esrun mint-tokens.ts
 ```
 
+<p align="center">
+  <img src="ex2.png" alt="Ex2: Mint Tokens" width="800">
+  <br>
+  <em>Ex2: Mint Tokens</em>
+</p>
+
 ### 3. Transfer Tokens
 
 This command transfers SPL tokens from one account to another. Ensure that the recipient has an associated token account.
