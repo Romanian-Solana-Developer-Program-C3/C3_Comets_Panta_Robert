@@ -53,3 +53,17 @@ npx esrun nft-create.ts
 ```
 
 This script initializes a new NFT mint, assigns metadata, and confirms the transaction on the blockchain.
+
+<p align="center">
+  <img src="ex3.png" alt="Ex3: Create NFT" width="800">
+  <br>
+  <em>Ex3: Create NFT</em>
+</p>
+
+Checking <https://solscan.io/tx/2prAC26AzT1M7U6x89Ji5v5mGR6XzNkYEqB46AmQ8wQQTAoLN48TgXY8WdkrdvdCdXZnm9x3kyWNxjKE3uULRsdF?cluster=devnet> and Mint for NFT Details.
+
+<p align="center">
+  <img src="ex31.png" alt="Ex3.1: NFT Details" width="800">
+  <br>
+  <em>Ex3.1: NFT Details</em>
+</p>
