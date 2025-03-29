@@ -18,7 +18,7 @@ npx tsx generate-keypair.ts
 This command checks the balance of a Solana account by providing its public key.
 
 ```bash
-npx tsx check-balance.ts <public-key>
+npx esrun check-balance.ts <public-key>
 ```
 
 Replace public-key with the actual public key of the Solana account.
@@ -28,7 +28,7 @@ Replace public-key with the actual public key of the Solana account.
 This command sends SOL from one account to another. To complete the transfer, provide the recipient's public key.
 
 ```bash
-npx tsx send.ts -- <recipient-public-key>
+npx tsx transfer-sol.ts <recipient-public-key>
 ```
 
 Replace recipient-public-key with the actual public key of the recipient's Solana account.
