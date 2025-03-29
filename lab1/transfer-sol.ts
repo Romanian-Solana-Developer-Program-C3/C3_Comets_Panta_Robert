@@ -13,11 +13,11 @@ import {
 import { getKeypairFromEnvironment } from "@solana-developers/helpers";
 
 /**
- * Trimite SOL de la un wallet la altul.
- * @param connection - Conexiunea la rețeaua Solana
- * @param senderKeypair - Cheia privată a expeditorului
- * @param recipientPubKey - Adresa publică a destinatarului
- * @param amountInLamports - Cantitatea de SOL în Lamports
+ * Sends SOL from one wallet to another.
+ * @param connection - Solana network connection
+ * @param senderKeypair - Sender's private key
+ * @param recipientPubKey - Recipient's public address
+ * @param amountInLamports - Amount of SOL in Lamports
  */
 async function sendSol(
   connection: Connection,
@@ -41,28 +41,28 @@ async function sendSol(
       { commitment: "confirmed" }
     );
 
-    console.log(`✅ Tranzacție reușită! Signature: ${signature}`);
+    console.log(`✅ Transaction successful! Signature: ${signature}`);
     return true;
   } catch (error) {
-    console.error("❌ Eroare la trimiterea SOL:", error);
+    console.error("❌ Error sending SOL:", error);
     return false;
   }
 }
 
 /**
- * Funcția principală care inițiază transferul de SOL
+ * Main function to initiate the SOL transfer
  */
 async function main() {
   try {
-    // Citirea adresei destinatarului din argumentele CLI
+    // Read recipient's address from CLI arguments
     const args = process.argv;
     const recipientPubKeyString = args.find(
       (arg, index) => index > 1 && arg && !arg.startsWith("--")
     );
 
     if (!recipientPubKeyString) {
-      console.error("❌ Eroare: Trebuie să specifici o adresă publică validă.");
-      console.log("🔹 Utilizare: npx tsx transfer-sol.ts <recipient-public-key>");
+      console.error("❌ Error: You must provide a valid public address.");
+      console.log("🔹 Usage: npx tsx transfer-sol.ts <recipient-public-key>");
       return;
     }
 
@@ -70,42 +70,42 @@ async function main() {
     try {
       recipientPubKey = new PublicKey(recipientPubKeyString);
     } catch (error) {
-      console.error("❌ Adresa destinatarului este invalidă:", recipientPubKeyString);
+      console.error("❌ Invalid recipient address:", recipientPubKeyString);
       return;
     }
 
-    // Obținerea cheii private din variabilele de mediu
+    // Retrieve sender's private key from environment variables
     const senderKeypair = getKeypairFromEnvironment("SECRET_KEY");
-    console.log("📩 Expeditor:", senderKeypair.publicKey.toString());
+    console.log("📩 Sender:", senderKeypair.publicKey.toString());
 
-    // Conectare la rețeaua Solana (Devnet)
+    // Connect to the Solana network (Devnet)
     const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
 
-    // Definirea sumei de trimis (0.5 SOL)
+    // Define the amount to send (0.5 SOL)
     const amountToSend = LAMPORTS_PER_SOL * 0.5;
 
-    // Verificarea soldului expeditorului
+    // Check sender's balance
     const senderBalance = await connection.getBalance(senderKeypair.publicKey);
-    console.log(`💰 Sold expeditor: ${senderBalance / LAMPORTS_PER_SOL} SOL`);
+    console.log(`💰 Sender balance: ${senderBalance / LAMPORTS_PER_SOL} SOL`);
 
     if (senderBalance < amountToSend + 5000) {
-      console.log("⚠️ Fonduri insuficiente pentru tranzacție!");
+      console.log("⚠️ Insufficient funds for transaction!");
       return;
     }
 
-    // Trimiterea SOL
+    // Send SOL
     const success = await sendSol(connection, senderKeypair, recipientPubKey, amountToSend);
     if (!success) return;
 
-    // Afișarea soldului final al expeditorului și destinatarului
+    // Display final balances of sender and recipient
     const senderFinalBalance = await connection.getBalance(senderKeypair.publicKey);
     const recipientFinalBalance = await connection.getBalance(recipientPubKey);
-    console.log(`💰 Sold final expeditor: ${senderFinalBalance / LAMPORTS_PER_SOL} SOL`);
-    console.log(`🎉 Sold destinatar: ${recipientFinalBalance / LAMPORTS_PER_SOL} SOL`);
+    console.log(`💰 Final sender balance: ${senderFinalBalance / LAMPORTS_PER_SOL} SOL`);
+    console.log(`🎉 Recipient balance: ${recipientFinalBalance / LAMPORTS_PER_SOL} SOL`);
   } catch (error) {
-    console.error("❌ Eroare în funcția principală:", error);
+    console.error("❌ Error in main function:", error);
   }
 }
 
-console.log("🚀 Începem transferul SOL...");
+console.log("🚀 Starting SOL transfer...");
 main();
