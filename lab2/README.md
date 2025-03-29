@@ -21,7 +21,7 @@ This script initializes a new SPL token mint and returns an explorer link to ver
 </p>
 
 ```bash
-solana account <new-address-from-the-link-generated>
+solana account <new-address>
 ```
 
 <p align="center">
@@ -52,3 +52,20 @@ This command transfers SPL tokens from one account to another. Ensure that the r
 ```bash
 npx esrun transfer-tokens.ts
 ```
+
+<p align="center">
+  <img src="ex3.png" alt="Ex3: Transfer Tokens" width="800">
+  <br>
+  <em>Ex3: Transfer Tokens</em>
+</p>
+
+```bash
+spl-token display <token-address>
+```
+
+<p align="center">
+  <img src="ex3.1.png" alt="Ex3.1: Check SPL Token Details" width="800">
+  <br>
+  <em>Ex3.1: Check SPL Token Details</em>
+</p>
+
