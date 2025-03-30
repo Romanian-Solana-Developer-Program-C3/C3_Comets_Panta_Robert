@@ -6,6 +6,7 @@
 3. [**Laboratory 2: Tokens**](#laboratory-2-)
 4. [**Laboratory 3: NFTs**](#laboratory-3-)
 5. [**Laboratory 4: RUST**](#laboratory-4-)
+6. [**Laboratory 5: Anchor**](#laboratory-5-)
 
 ## Introduction 📚
 This repository contains TypeScript, Rust and Anchor scripts to interact with the Solana blockchain from the **[Solana Developer Program](https://cometsweb3.space/solana-c3)**.
@@ -64,5 +65,7 @@ This section details uploading NFT images, metadata, and minting NFTs on Solana.
   npx esrun nft-create.ts
   ```
 
-## Laboratory 4 🔐
+## Laboratory 4 🦀
+
+## Laboratory 5 ⚓
 
