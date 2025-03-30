@@ -21,11 +21,11 @@ This section covers fundamental operations on the Solana blockchain, such as gen
   ```
 - **Check Balance** 💰
   ```sh
-  npx tsx check-balance.ts <public-key>
+  npx esrun check-balance.ts <public-key>
   ```
 - **Send SOL** 💸
   ```sh
-  npx tsx send.ts -- <recipient-public-key>
+  npx tsx transfer-sol.ts <recipient-public-key>
   ```
 
 ## Laboratory 2 🌟
