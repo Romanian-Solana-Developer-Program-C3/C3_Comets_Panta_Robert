@@ -66,6 +66,8 @@ This section details uploading NFT images, metadata, and minting NFTs on Solana.
   ```
 
 ## Laboratory 4 🦀
+### Rustlings Exercises
+This section contains hands-on exercises designed to introduce to Rust's syntax and core concepts. It will work through a series of small programs that require debugging and modification to understand key Rust principles. 
 
 ## Laboratory 5 ⚓
 
