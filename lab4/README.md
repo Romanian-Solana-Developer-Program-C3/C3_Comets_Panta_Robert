@@ -16,17 +16,12 @@ You can install Rustlings with:
 cargo install rustlings
 ```
 
-### 2. Clone the Repository
-If you haven't already, clone the lab repository:
-```bash
-git clone https://github.com/yourusername/lab4-rustlings.git
-cd lab4-rustlings
-```
-
-### 3. Running the Exercises
+### 2. Running the Exercises
 To start the Rustlings exercises, run:
 ```bash
-rustlings watch
+rustlings init
+cd rustlings
+rustlings
 ```
 This will continuously check your progress as you complete the exercises.
 
