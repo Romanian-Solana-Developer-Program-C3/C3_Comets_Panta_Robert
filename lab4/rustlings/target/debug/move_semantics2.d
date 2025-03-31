@@ -1,0 +1,1 @@
+/mnt/d/CometsOfWeb3/Project/C3_Comets_Panta_Robert/lab4/rustlings/target/debug/move_semantics2: /mnt/d/CometsOfWeb3/Project/C3_Comets_Panta_Robert/lab4/rustlings/exercises/06_move_semantics/move_semantics2.rs
