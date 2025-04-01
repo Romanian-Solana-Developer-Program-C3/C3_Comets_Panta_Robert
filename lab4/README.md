@@ -33,8 +33,6 @@ Rustlings exercises are divided into categories:
 - **Functions** → Practice defining and using functions.
 - **Ownership** → Understand borrowing and lifetimes.
 - **Structs & Enums** → Get familiar with Rust’s type system.
-- **Traits** → Implement custom behaviors for types.
-- **Error Handling** → Manage errors with `Result` and `Option`.
 
 
 
