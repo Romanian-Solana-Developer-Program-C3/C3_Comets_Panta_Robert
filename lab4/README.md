@@ -33,14 +33,14 @@ Rustlings exercises are divided into categories:
 
 | Exercise | Topic |
 |--------|-------------------------------|
-| **Exercise 0: Intro** |  |
-| **Exercise 1: Variables** |  |
-| **Exercise 2: Functions** |  |
-| **Exercise 3: If Statements** |  |
-| **Exercise 4: Primitive Types** |  |
-| **Exercise 5: Vectors** |  |
-| **Exercise 6: Move Semantics** |  |
-| **Exercise 7: Structs** |  |
-| **Exercise 8: Enums** |  |
-| **Exercise 9: Strings** |  |
+| Exercise 0| **Intro** |
+| Exercise 1| **Variables** |
+| Exercise 2| **Functions** |
+| Exercise 3| **If Statements** |
+| Exercise 4| **Primitive Types** |
+| Exercise 5| **Vectors** |
+| Exercise 6| **Move Semantics** |
+| Exercise 7| **Structs** |
+| Exercise 8| **Enums** |
+| Exercise 9| **Strings** |
 
