@@ -7,6 +7,8 @@
 4. [**Laboratory 3: NFTs**](#laboratory-3-)
 5. [**Laboratory 4: RUST**](#laboratory-4-)
 6. [**Laboratory 5: Anchor**](#laboratory-5-)
+7. [**Laboratory 6: **](#laboratory-6-)
+8. [**Laboratory 7: **](#laboratory-7-)
 
 ## Introduction 📚
 This repository contains TypeScript, Rust and Anchor scripts to interact with the Solana blockchain from the **[Solana Developer Program](https://cometsweb3.space/solana-c3)**.
@@ -87,5 +89,13 @@ Rustlings exercises are divided into categories:
 | Exercise 9 | **Strings**             |
 
 ## Laboratory 5 ⚓
+###
+
+
+## Laboratory 6 
+###
+
+
+## Laboratory 7
 ###
 
