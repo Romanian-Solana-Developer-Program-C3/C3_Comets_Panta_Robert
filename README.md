@@ -87,4 +87,5 @@ Rustlings exercises are divided into categories:
 | Exercise 9 | **Strings**             |
 
 ## Laboratory 5 ⚓
+###
 
