@@ -1,16 +1,14 @@
 #  ☄️C3 Comets Panța Robert☄️
 
-## Table of Contents 📑
-1. [**Introduction**](#introduction-)
-2. [**Laboratory 1: Transactions**](#laboratory-1-)
-3. [**Laboratory 2: Tokens**](#laboratory-2-)
-4. [**Laboratory 3: NFTs**](#laboratory-3-)
-5. [**Laboratory 4: RUST**](#laboratory-4-)
-6. [**Laboratory 5: Anchor**](#laboratory-5-)
-7. [**Laboratory 6: X**](#laboratory-6-)
-
-## Introduction 📚
 This repository contains TypeScript, Rust and Anchor scripts to interact with the Solana blockchain from the **[Solana Developer Program](https://cometsweb3.space/solana-c3)**.
+
+## Table of Contents 📑
+1. [**Laboratory 1: Transactions**](#laboratory-1-)
+2. [**Laboratory 2: Tokens**](#laboratory-2-)
+3. [**Laboratory 3: NFTs**](#laboratory-3-)
+4. [**Laboratory 4: RUST**](#laboratory-4-)
+5. [**Laboratory 5: Anchor**](#laboratory-5-)
+6. [**Laboratory 6: X**](#laboratory-6-)
 
 ## Laboratory 1 🚀
 ### Solana Transaction Scripts
