@@ -7,7 +7,7 @@
 4. [**Laboratory 3: NFTs**](#laboratory-3-)
 5. [**Laboratory 4: RUST**](#laboratory-4-)
 6. [**Laboratory 5: Anchor**](#laboratory-5-)
-7. [**Laboratory 6: **](#laboratory-6-)
+7. [**Laboratory 6: X**](#laboratory-6-)
 
 ## Introduction 📚
 This repository contains TypeScript, Rust and Anchor scripts to interact with the Solana blockchain from the **[Solana Developer Program](https://cometsweb3.space/solana-c3)**.
