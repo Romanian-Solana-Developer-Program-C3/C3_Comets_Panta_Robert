@@ -11,28 +11,36 @@ Ensure you have the following installed:
 - [Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
 - [Rustlings](https://github.com/rust-lang/rustlings)
 
-You can install Rustlings with:
+Installing Rustlings with:
 ```bash
 cargo install rustlings
 ```
 
 ### 2. Running the Exercises
-To start the Rustlings exercises, run:
+Start the Rustlings exercises using:
 ```bash
 rustlings init
 cd rustlings
 rustlings
 ```
-This will continuously check your progress as you complete the exercises.
+This will continuously check the progress as the exercises are completed.
 
 
 ## Structure of the Lab
 
-Rustlings exercises are divided into categories (01-09 exercises):
-- **Variables** → Learn about mutability and shadowing.
-- **Functions** → Practice defining and using functions.
-- **Ownership** → Understand borrowing and lifetimes.
-- **Structs & Enums** → Get familiar with Rust’s type system.
+Rustlings exercises are divided into categories:
 
 
+| Exercise | Topic |
+|--------|-------------------------------|
+| **Exercise 0: Intro** |  |
+| **Exercise 1: Variables** |  |
+| **Exercise 2: Functions** |  |
+| **Exercise 3: If Statements** |  |
+| **Exercise 4: Primitive Types** |  |
+| **Exercise 5: Vectors** |  |
+| **Exercise 6: Move Semantics** |  |
+| **Exercise 7: Structs** |  |
+| **Exercise 8: Enums** |  |
+| **Exercise 9: Strings** |  |
 
