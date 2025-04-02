@@ -33,7 +33,7 @@ Rustlings exercises are divided into categories:
 
 | Exercise | Topic |
 |--------|-------------------------------|
-| Exercise 0| **Intro** |
+| Exercise 0| Intro |
 | Exercise 1| **Variables** |
 | Exercise 2| **Functions** |
 | Exercise 3| **If Statements** |
