@@ -88,7 +88,9 @@ Rustlings exercises are divided into categories:
 | Exercise 9 | **Strings**             |
 
 ## Laboratory 5 ⚓
-###
+### Building Solana Programs with Anchor
+This section explores how to develop and deploy Solana smart contracts (programs) using Anchor, a framework that simplifies the development of on-chain applications.
+
 
 
 ## Laboratory 6 

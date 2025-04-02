@@ -6,7 +6,7 @@ This repository contains Rust scripts to interact with a collection of exercises
 ## Getting Started
 
 ### 1. Prerequisites
-Ensure you have the following installed:
+Ensure having the following installed:
 - [Rust](https://www.rust-lang.org/tools/install)
 - [Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
 - [Rustlings](https://github.com/rust-lang/rustlings)
