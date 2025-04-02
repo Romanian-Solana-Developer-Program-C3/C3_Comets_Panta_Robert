@@ -28,7 +28,7 @@ This will continuously check your progress as you complete the exercises.
 
 ## Structure of the Lab
 
-Rustlings exercises are divided into categories:
+Rustlings exercises are divided into categories (01-09 exercises):
 - **Variables** → Learn about mutability and shadowing.
 - **Functions** → Practice defining and using functions.
 - **Ownership** → Understand borrowing and lifetimes.
