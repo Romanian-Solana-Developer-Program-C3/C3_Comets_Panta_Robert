@@ -8,17 +8,17 @@ This repository contains Anchor scripts used for the development and deployment 
 ### 1. Prerequisites
 Ensure having the following installed:
 
-Solana CLI release 
+**Solana CLI release** 
 ```bash
 solana-install init 1.18.25 
 ```
 
-Rust 1.76 
+**Rust 1.76** 
 ```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 
 ```
 
-Anchor 0.30.1 
+**Anchor 0.30.1** 
 ```bash
 cargo install --git https://github.com/coral-xyz/anchor avm --locked --force 
 
@@ -26,7 +26,7 @@ avm install 0.30.1
 avm use 0.30.1 
 ```
 
-Yarn
+**Yarn**
 ```bash
 npm i -g yarn
 
