@@ -69,5 +69,22 @@ This section details uploading NFT images, metadata, and minting NFTs on Solana.
 ### Rustlings Exercises
 This section contains hands-on exercises designed to introduce to Rust's syntax and core concepts. It will work through a series of small programs that require debugging and modification to understand key Rust principles. 
 
+### Structure of the Lab 🏗️
+
+Rustlings exercises are divided into categories:
+
+| Exercise   | Topic                   |
+|:---------:|:-----------------------:|
+| Exercise 0 | **Intro**               |
+| Exercise 1 | **Variables**           |
+| Exercise 2 | **Functions**           |
+| Exercise 3 | **If Statements**       |
+| Exercise 4 | **Primitive Types**     |
+| Exercise 5 | **Vectors**             |
+| Exercise 6 | **Move Semantics**      |
+| Exercise 7 | **Structs**             |
+| Exercise 8 | **Enums**               |
+| Exercise 9 | **Strings**             |
+
 ## Laboratory 5 ⚓
 
