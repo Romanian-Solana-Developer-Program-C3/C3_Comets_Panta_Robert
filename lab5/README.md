@@ -42,9 +42,9 @@ anchor test
 ```
 
 
-## Questions
+## Q&A
 
-| Question   | Answer                  |
+| Questions   | Answers                  |
 |:---------:|:-----------------------:|
 | 1. Does the anchor project compile without any warnings?  | **No, the Anchor project does not compile without warnings. The output shows several warnings related to unexpected cfg condition values (such as custom-heap, solana, anchor-debug, etc.), which are caused by configuration mismatches or outdated dependencies.**               |
 | 2. What is the name of the instruction handler?  | **In an Anchor program, the instruction handler is typically the function marked with the #[instruction] attribute or defined as part of the #[program] macro. For the project structure, the instruction handler is in the lib.rs file under favorites/programs/src/ directory; therefore, initialize is the instruction handler.**           |
