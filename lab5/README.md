@@ -41,6 +41,18 @@ yarn i
 anchor test 
 ```
 
+### 3. Build & Test
+Building the Project:
+```bash
+anchor build
+```
+see idl-> favorites.json
+
+Testing the Project:
+```bash
+anchor test 
+```
+
 ## Q&A
 
 | Questions   | Answers                  |
