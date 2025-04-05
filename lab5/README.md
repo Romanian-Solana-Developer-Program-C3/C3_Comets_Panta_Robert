@@ -53,7 +53,7 @@ Testing the Project:
 anchor test 
 ```
 
-Result: Tests Creation & Check Successfully
+Results of the tests are successfully:
 <p align="center">
   <img src="lab5_tests.png" alt="Tests" width="800">
   <br>
