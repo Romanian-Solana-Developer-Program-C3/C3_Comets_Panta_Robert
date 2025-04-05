@@ -104,15 +104,13 @@ This section focuses on building Solana smart contracts (programs) using Anchor,
 This Solana-based program allows users to store and manage their favorite color, favorite number, and hobbies on the blockchain. Built with the Anchor framework, the program ensures that each user's preferences are securely stored in an account, making the data immutable and easily accessible.
 
 ### Key Features 🔑
-Secure User Data: Only the account owner (the user) can modify their favorites, ensuring privacy and security.
+- **Secure User Data:** Only the account owner (the user) can modify their favorites, ensuring privacy and security.
 
-Permanent Storage: User preferences are stored on-chain, making the data accessible and unaltered over time.
+- **Permanent Storage:** User preferences are stored on-chain, making the data accessible and unaltered over time.
 
-Program Derived Addresses (PDAs): The program uses PDAs to securely derive unique addresses for each user, ensuring that each user's data is associated with their public key. This ensures each user has their own personalized account, which is tied to their public key and cannot be modified by others.
+- **Program Derived Addresses (PDAs):** The program uses PDAs to securely derive unique addresses for each user, ensuring that each user's data is associated with their public key. This ensures each user has their own personalized account, which is tied to their public key and cannot be modified by others.
 
-Simple Interaction: Users can easily set and retrieve their favorite color, number, and hobbies using smart contract methods.
-
-Customization: Each user has a unique PDA for their favorites, derived from their public key, providing a personalized experience.
+- **Simple Interaction:** Users can easily set and retrieve their favorite color, number, and hobbies using smart contract methods.
 
 ## Laboratory 6 
 ###
