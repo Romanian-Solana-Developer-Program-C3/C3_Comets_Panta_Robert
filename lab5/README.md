@@ -55,9 +55,9 @@ anchor test
 
 Results of the tests are successfully:
 <p align="center">
-  <img src="lab5_tests.png" alt="Tests" width="800">
+  <img src="lab5_tests.png" alt="Results: Tests" width="800">
   <br>
-  <em>Tests</em>
+  <em>Results: Tests</em>
 </p>
 
 
