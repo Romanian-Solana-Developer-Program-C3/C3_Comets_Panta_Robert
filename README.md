@@ -120,6 +120,4 @@ This Solana-based program allows users to store and manage their favorite color,
 ## Laboratory 7 💵
 ### Escrow Part2
 
-## Laboratory 8 🎟️
-### Lottery
 
