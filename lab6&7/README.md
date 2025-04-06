@@ -1,2 +1,2 @@
-# Laboratory 6
+# Laboratory 6 & 7
 # 
