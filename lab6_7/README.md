@@ -39,7 +39,7 @@ Building the Project:
 ```bash
 anchor build
 ```
-💡 The IDL file (Interface Definition Language) can be found under target/idl/favorites.json.
+💡 The IDL file (Interface Definition Language) can be found under target/idl/escrow.json.
 
 Testing the Project:
 ```bash

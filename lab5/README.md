@@ -3,9 +3,9 @@
 
 This repository contains Anchor scripts used for the development and deployment of Solana smart contracts (programs).
 
-## Getting Started
+## Getting Started 🚀
 
-### 1. Prerequisites
+### 1. Prerequisites ✅
 Ensure having the following installed:
 
 **Solana CLI release** 
@@ -32,7 +32,7 @@ npm i -g yarn
 
 ```
 
-### 2. Running the Exercises
+### 2. Running the Exercises ⚙️
 Start the Anchor framework using:
 ```bash
 anchor init favorites 
@@ -41,12 +41,12 @@ yarn i
 anchor test 
 ```
 
-### 3. Build & Test
+### 3. Build & Test 🛠️
 Building the Project:
 ```bash
 anchor build
 ```
-see idl-> favorites.json
+💡 The IDL file (Interface Definition Language) can be found under target/idl/favorites.json.
 
 Testing the Project:
 ```bash
@@ -61,7 +61,7 @@ Results of the tests are successfully:
 </p>
 
 
-## Q&A
+## Q&A 💬
 
 | Questions   | Answers                  |
 |:---------:|:-----------------------:|
