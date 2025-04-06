@@ -1,4 +1,4 @@
-# Laboratory 4
+# Laboratory 4 🧑‍💻
 # Rustlings Exercises
 
 This repository contains Rust scripts to interact with a collection of exercises designed to help learning Rust.

@@ -1,4 +1,4 @@
-# Laboratory 6 & 7
+# Laboratory 6 & 7 🧑‍💻
 # Escrow Scripts
 
 This section contains Anchor-based scripts used to develop and deploy a Solana escrow program, allowing token exchange between parties with secure conditions.

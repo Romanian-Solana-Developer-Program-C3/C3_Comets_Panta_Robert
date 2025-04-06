@@ -1,4 +1,4 @@
-# Laboratory 5
+# Laboratory 5 🧑‍💻
 # Anchor Scripts
 
 This repository contains Anchor scripts used for the development and deployment of Solana smart contracts (programs).
