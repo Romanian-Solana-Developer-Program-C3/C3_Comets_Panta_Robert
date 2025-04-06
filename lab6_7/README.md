@@ -1,11 +1,11 @@
 # Laboratory 6 & 7
 # Escrow Scripts
 
-This repository contains Anchor scripts used for the development and deployment of Solana smart contracts (programs).
+This section contains Anchor-based scripts used to develop and deploy a Solana escrow program, allowing token exchange between parties with secure conditions.
 
-## Getting Started
+## Getting Started 🚀
 
-### 1. Prerequisites
+### 1. Prerequisites ✅
 Ensure having the following installed:
 
 **Solana CLI release** 
@@ -26,7 +26,7 @@ avm install 0.30.1
 avm use 0.30.1 
 ```
 
-### 2. Running the Exercises
+### 2. Running the Exercises ⚙️
 Start the Anchor framework using:
 ```bash
 anchor init escrow --template=multiple
@@ -34,12 +34,12 @@ cd escrow
 anchor test 
 ```
 
-### 3. Build & Test
+### 3. Build & Test 🛠️
 Building the Project:
 ```bash
 anchor build
 ```
-see idl-> favorites.json
+💡 The IDL file (Interface Definition Language) can be found under target/idl/favorites.json.
 
 Testing the Project:
 ```bash
