@@ -3,9 +3,9 @@
 
 This repository contains Rust scripts to interact with a collection of exercises designed to help learning Rust.
 
-## Getting Started
+## Getting Started 🚀
 
-### 1. Prerequisites
+### 1. Prerequisites ✅
 Ensure having the following installed:
 - [Rust](https://www.rust-lang.org/tools/install)
 - [Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
@@ -16,7 +16,7 @@ Installing Rustlings with:
 cargo install rustlings
 ```
 
-### 2. Running the Exercises
+### 2. Running the Exercises ⚙️
 Start the Rustlings exercises using:
 ```bash
 rustlings init
