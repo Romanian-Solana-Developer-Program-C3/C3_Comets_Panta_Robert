@@ -8,8 +8,8 @@ This repository contains TypeScript, Rust and Anchor scripts to interact with th
 3. [**Laboratory 3: NFTs**](#laboratory-3-)
 4. [**Laboratory 4: RUST**](#laboratory-4-)
 5. [**Laboratory 5: Anchor**](#laboratory-5-)
-6. [**Laboratory 6 & 7: Escrow**](#laboratory-6-&-7-)
-7. [**Laboratory 8: X**](#laboratory-8-)
+6. [**Laboratory 6: Escrow Part1**](#laboratory-6-)
+7. [**Laboratory 7: Escrow Part2**](#laboratory-7-)
 
 ## Laboratory 1 🚀
 ### Solana Transaction Scripts
@@ -113,9 +113,9 @@ This Solana-based program allows users to store and manage their favorite color,
 
 - **Simple Interaction:** Users can easily set and retrieve their favorite color, number, and hobbies using smart contract methods.
 
-## Laboratory 6 & 7 🤝💵
-### Escrow
+## Laboratory 6 🤝
+### Escrow Part1
 
-## Laboratory 8 
-### X
+## Laboratory 7 💵
+### Escrow Part2
 
