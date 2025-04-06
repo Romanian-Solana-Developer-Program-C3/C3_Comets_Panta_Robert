@@ -1,7 +1,9 @@
 use anchor_lang::prelude::*;
-use anchor_spl::token_interface::{Mint, TokenAccount, TokenInterface};
-
-
+use anchor_spl::{
+    associated_token::AssociatedToken,
+    token::TokenAccount,
+    token_interface::{Mint, TokenInterface},
+};
 //UserA -- deposits token A into our program -> wants token B from our program
 //UserA -- creates an offer
 #[derive(Accounts)]
@@ -13,7 +15,7 @@ pub struct MakeOffer<'info>{
     pub token_mint_a: InterfaceAccount<'info, Mint>,
     pub token_mint_b: InterfaceAccount<'info, Mint>,
 
-    pub maker_token_account_a: InterfaceAccount<'info, TokenAccount>,
+    pub maker_token_account_a: Account<'info, TokenAccount>,
     #[account(init, 
         payer = maker,
         associated_token::mint = token_mint_a,
@@ -21,17 +23,15 @@ pub struct MakeOffer<'info>{
         associated_token::token_program = token_program,
         
     )]
-    pub vault: InterfaceAccount<'info, TokenAccount>,
-    #[account(init,
-        payer = maker,
-        seeds = [b"offer", as_ref()],
-        space = ,
-        bump
-            
-    
-    )]
+    pub vault: Account<'info, TokenAccount>,
+    // #[account(init,
+    //     payer = maker,
+    //     seeds = [b"offer", as_ref()],
+    //     space = ,
+    //     bump             
+    // )]
 
-    pub offer: Account<'info, Offer>,
+    // pub offer: Account<'info, Offer>,
     pub associated_token_program: Program<'info, AssociatedToken>,
     pub token_program: Interface<'info, TokenInterface>,
     pub system_program: Program<'info, System>,
