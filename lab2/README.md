@@ -3,9 +3,9 @@
 
 This repository contains TypeScript scripts to interact with the Solana blockchain, including creating token mints, minting tokens, and transferring tokens.
 
-## Commands
+## Commands 🛠️
 
-### 1. Create Token Mint
+### 1. Create Token Mint 💰
 
 Use this command to create a new token mint on the Solana blockchain.
 
@@ -31,7 +31,7 @@ solana account <new-address>
 </p>
 
 
-### 2. Mint Tokens
+### 2. Mint Tokens 🪙
 
 This command mints additional tokens to an associated token account.
 
@@ -45,7 +45,7 @@ npx esrun mint-tokens.ts
   <em>Ex2: Mint Tokens</em>
 </p>
 
-### 3. Transfer Tokens
+### 3. Transfer Tokens 🔁
 
 This command transfers SPL tokens from one account to another. Ensure that the recipient has an associated token account.
 
