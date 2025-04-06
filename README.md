@@ -10,6 +10,7 @@ This repository contains TypeScript, Rust and Anchor scripts to interact with th
 5. [**Laboratory 5: Anchor**](#laboratory-5-)
 6. [**Laboratory 6: Escrow Part1**](#laboratory-6-)
 7. [**Laboratory 7: Escrow Part2**](#laboratory-7-)
+8. [**Laboratory 8: Lottery**](#laboratory-8-)
 
 ## Laboratory 1 🚀
 ### Solana Transaction Scripts
@@ -118,4 +119,7 @@ This Solana-based program allows users to store and manage their favorite color,
 
 ## Laboratory 7 💵
 ### Escrow Part2
+
+## Laboratory 8 🎟️
+### Lottery
 
