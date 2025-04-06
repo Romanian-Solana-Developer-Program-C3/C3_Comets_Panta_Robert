@@ -114,10 +114,12 @@ This Solana-based program allows users to store and manage their favorite color,
 
 - **Simple Interaction:** Users can easily set and retrieve their favorite color, number, and hobbies using smart contract methods.
 
-## Laboratory 6 🤝
+## Laboratory 6 🏦
 ### Escrow Part1
 
 ## Laboratory 7 💵
 ### Escrow Part2
 
+## Laboratory 8 🎟️
+### Lottery
 
