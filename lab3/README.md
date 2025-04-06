@@ -3,9 +3,9 @@
 
 This repository contains TypeScript scripts to interact with the Solana blockchain, including uploading NFT images, NFT metadata and creating NFTs.
 
-## Commands
+## Commands 🛠️
 
-### 1. Upload NFT Image
+### 1. Upload NFT Image 🖼️
 
 Use this command to upload an image to be used for an NFT.
 
@@ -20,7 +20,7 @@ This script uploads an image and returns a URI to access it.
   <em>Ex1: Upload NFT Image</em>
 </p>
 
-### 2. Upload NFT Metadata
+### 2. Upload NFT Metadata 📄
 
 This command uploads metadata for an NFT, including name, symbol, description, and attributes.
 
@@ -44,7 +44,7 @@ Checking <https://devnet.irys.xyz/FrMQVN9YZakxmoiR7rXaxxESxhFSB4YbTM5mx7SNphdw> 
   <em>Ex2.1: Check for NFT Metadata</em>
 </p>
 
-### 3. Create NFT
+### 3. Create NFT 🎨
 
 This command mints a new NFT on the Solana blockchain using the uploaded metadata.
 
