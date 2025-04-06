@@ -8,9 +8,8 @@ This repository contains TypeScript, Rust and Anchor scripts to interact with th
 3. [**Laboratory 3: NFTs**](#laboratory-3-)
 4. [**Laboratory 4: RUST**](#laboratory-4-)
 5. [**Laboratory 5: Anchor**](#laboratory-5-)
-6. [**Laboratory 6: Escrow Part1**](#laboratory-6-)
-7. [**Laboratory 7: Escrow Part2**](#laboratory-7-)
-8. [**Laboratory 8: Lottery**](#laboratory-8-)
+6. [**Laboratory 6 & 7: Escrow**](#laboratory-6-&-7-)
+7. [**Laboratory 8: Lottery**](#laboratory-8-)
 
 
 ## Laboratory 1 🚀
@@ -115,11 +114,35 @@ This Solana-based program allows users to store and manage their favorite color,
 
 - **Simple Interaction:** Users can easily set and retrieve their favorite color, number, and hobbies using smart contract methods.
 
-## Laboratory 6 🏦
-### Escrow Part1
+## Laboratory 6 & 7 🏦
+### Building Solana Escrow Program with Anchor Part1
 
-## Laboratory 7 💵
-### Escrow Part2
+This section focuses on creating a Solana escrow program using the Anchor framework. The program allows users to create offers for token exchanges, securely depositing tokens into an escrow account, and facilitate the exchange of assets between parties. By leveraging Anchor’s tools and Solana's smart contract capabilities, the program ensures secure and efficient transactions while preventing fraud.
+
+### Commands 🛠️
+- **Build the Program** 🚀
+  ```sh
+  anchor build
+  ```
+
+- **Run Unit Tests** 🧪
+  ```sh
+  anchor test  
+  ```
+
+### Escrow Program Using Anchor 🌟
+This Solana-based program allows users to create escrow offers for token swaps, securely holding the deposited tokens until both parties fulfill the terms of the offer. Built with the Anchor framework, the program ensures that assets are managed and exchanged in a trustless manner.
+
+### Key Features 🔑
+Secure Token Deposit: Users deposit tokens into an escrow account, where they are held until the exchange conditions are met.
+
+Trustless Transactions: The program ensures that both parties involved in the offer must fulfill the terms before the tokens are released, reducing the risk of fraud.
+
+Personalized Offers: Users can create offers with specific token amounts and conditions, making each offer unique and customizable.
+
+Program Derived Addresses (PDAs): Each offer is linked to a unique address, derived from the user's public key, ensuring that offers are securely tied to the creator and cannot be modified by others.
+
+Efficient Token Exchange: The program facilitates the secure transfer of tokens between users, ensuring that the exchange process is seamless and efficient.
 
 ## Laboratory 8 🎟️
 ### Lottery
