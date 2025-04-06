@@ -3,9 +3,9 @@
 
 This repository contains TypeScript scripts to interact with the Solana blockchain, including generating keypairs, checking balances, and sending SOL between accounts.
 
-## Commands
+## Commands 🛠️
 
-### 1. Generate Keypair
+### 1. Generate Keypair 🗝️
 
 Use this command to generate a new Solana keypair and save it to a specified file.
 
@@ -19,7 +19,7 @@ npx tsx generate-keypair.ts
   <em>Ex1: Generate Keypair</em>
 </p>
 
-### 2. Check Balance
+### 2. Check Balance 💵
 
 This command checks the balance of a Solana account by providing its public key.
 
@@ -35,7 +35,7 @@ Replace public-key with the actual public key of the Solana account.
   <em>Ex2: Check Balance</em>
 </p>
 
-### 3. Send SOL
+### 3. Send SOL ✉️
 
 This command sends SOL from one account to another. To complete the transfer, provide the recipient's public key.
 
