@@ -15,11 +15,11 @@ declare_id!("EzKx1u3MTR1SmpEuLL3dTrxyyDj4nPqcu4ThbeoZvbd3");
 pub mod escrow {
     use super::*;
 
-    pub fn handler(ctx:Context<MakeOffer>) -> Result<()>{
-        make_offer::handler(ctx)
+    pub fn handler(ctx:Context<MakeOffer>,
+         id: u64, 
+         token_a_amount: u64, 
+         token_b_wanted_amount: u64
+    ) -> Result<()>{
+        make_offer::handler(ctx, id, token_a_amount, token_b_wanted_amount)
     }
 }
-
-// pub fn make_offr()
-
-// pub fn take_offer()
