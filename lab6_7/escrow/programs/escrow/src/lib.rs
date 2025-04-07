@@ -27,6 +27,8 @@ pub mod escrow {
         ctx: Context<TakeOffer>, 
         id: u64
     ) -> Result<()> {
-        take_offer::handler(ctx, id)
+        take_offer::handler(ctx, id)?;
+
+        Ok(())
     }
 }

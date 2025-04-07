@@ -1,12 +1,73 @@
 use anchor_lang::prelude::*;
-use anchor_spl::token_interface::{Mint, TokenAccount, TokenInterface};
+use anchor_spl::{
+    associated_token::AssociatedToken,
+    token_2022::{transfer_checked, TransferChecked},
+    token_interface::{Mint, TokenAccount, TokenInterface},
+};
 
-use crate::{Offer};
+use crate::Offer;
 
-//User B (Tabker) -- takes the offer created by User A (Maker)
-//User B sends token B to vault and receives token A from vault
+// User B (Taker) -- takes the offer created by User A (Maker)
+// User B sends token B to vault and receives token A from vault
 
 pub fn handler(ctx: Context<TakeOffer>, id: u64) -> Result<()> {
+    transfer_tokens_to_maker(&ctx)?;
+    withdraw_from_vault(ctx)?;
+
+    Ok(())
+}
+
+pub fn transfer_tokens_to_maker(ctx: &Context<TakeOffer>) -> Result<()> {
+    let offer = &ctx.accounts.offer;
+    //Taker transfers token B to maker
+    let transfer_accounts = TransferChecked {
+        from: ctx.accounts.taker_token_account_b.to_account_info(),
+        to: ctx.accounts.maker_token_account_b.to_account_info(),
+        mint: ctx.accounts.token_mint_b.to_account_info(),
+        authority: ctx.accounts.taker.to_account_info(),
+    };
+    
+    let cpi_context = CpiContext::new(
+        ctx.accounts.token_program.to_account_info(), 
+        transfer_accounts,
+    );
+    transfer_checked(
+        cpi_context, 
+        offer.token_b_wanted_amount, 
+        ctx.accounts.token_mint_b.decimals,
+    )
+}
+
+
+pub fn withdraw_from_vault(ctx: Context<TakeOffer>) -> Result<()> {
+    //Taker receives token A from vault(program)
+    let signer_seeds: [&[&[u8]]; 1] = [&[
+        b"offer".as_ref(),
+        &ctx.accounts.maker.key().to_bytes(),
+        &ctx.accounts.offer.id.to_le_bytes(),
+        &[ctx.accounts.offer.bump],
+    ]];
+
+    let accounts = TransferChecked {
+        from: ctx.accounts.vault.to_account_info(),
+        to: ctx.accounts.taker_token_account_a.to_account_info(),
+        mint: ctx.accounts.token_mint_a.to_account_info(),
+        authority: ctx.accounts.offer.to_account_info(),
+    };
+
+    let cpi_context = 
+    CpiContext::new_with_signer(
+        ctx.accounts.token_program.to_account_info(), 
+        accounts,
+        &signer_seeds,
+    );
+ 
+    transfer_checked(
+        cpi_context, 
+        ctx.accounts.offer.token_a_amount, 
+        ctx.accounts.token_mint_a.decimals,
+    )?;
+
     Ok(())
 }
 
@@ -16,6 +77,7 @@ pub struct TakeOffer<'info>{
     #[account(mut)]
     pub taker: Signer<'info>,
 
+    /// CHECK: This account is validated via `has_one = maker` in the `offer` account constraint
     pub maker: AccountInfo<'info>,
 
     #[account(mint::token_program = token_program)]
@@ -43,7 +105,7 @@ pub struct TakeOffer<'info>{
         associated_token::authority = maker,
         associated_token::token_program = token_program,
     )]
-    pub maker_token_account_a: InterfaceAccount<'info, TokenAccount>,
+    pub maker_token_account_b: InterfaceAccount<'info, TokenAccount>,
     
     #[account(
         mut,
@@ -57,10 +119,10 @@ pub struct TakeOffer<'info>{
         has_one = maker,
         has_one = token_mint_a,
         has_one = token_mint_b,
-        seeds = [b"offer".as_ref(), maker.key().as_ref(), id.to_le_bytes().as_ref()],
+        seeds = [b"offer".as_ref(), maker.key().as_ref(), offer.id.to_le_bytes().as_ref()],
         bump = offer.bump,
     )]
-    pub offer: AccountInfo<'info, Offer>,
+    pub offer: Account<'info, Offer>,
 
     pub token_program: Interface<'info, TokenInterface>,
     pub associated_token_program: Program<'info, AssociatedToken>,
