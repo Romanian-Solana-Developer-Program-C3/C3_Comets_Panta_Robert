@@ -146,6 +146,6 @@ This Solana-based program allows users to create escrow offers for token swaps, 
 
 - **Cross Program Invocation (CPI):** The program uses CPI to call the transfer_checked function from the TokenProgram, enabling secure token transfers between accounts. This allows the escrow program to interact with other on-chain programs to manage token transfers, enhancing flexibility and security.
 
-## Laboratory 8 
+## Laboratory 8 🏦
 ### Lottery
 
