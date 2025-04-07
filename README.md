@@ -9,7 +9,7 @@ This repository contains TypeScript, Rust and Anchor scripts to interact with th
 4. [**Laboratory 4: RUST**](#laboratory-4-)
 5. [**Laboratory 5: Anchor**](#laboratory-5-)
 6. [**Laboratory 6 & 7: Escrow**](#laboratory-6--7-)
-7. [**Laboratory 8: Lottery**](#laboratory-9)
+7. [**Laboratory 8: Lottery**](#laboratory-8)
 
 
 ## Laboratory 1 🚀
@@ -146,6 +146,6 @@ This Solana-based program allows users to create escrow offers for token swaps, 
 
 - **Cross Program Invocation (CPI):** The program uses CPI to call the transfer_checked function from the TokenProgram, enabling secure token transfers between accounts. This allows the escrow program to interact with other on-chain programs to manage token transfers, enhancing flexibility and security.
 
-## Laboratory 9
+## Laboratory 8
 ### Lottery
 
