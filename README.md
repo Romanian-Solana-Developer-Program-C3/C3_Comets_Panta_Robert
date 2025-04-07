@@ -8,7 +8,7 @@ This repository contains TypeScript, Rust and Anchor scripts to interact with th
 3. [**Laboratory 3: NFTs**](#laboratory-3-)
 4. [**Laboratory 4: RUST**](#laboratory-4-)
 5. [**Laboratory 5: Anchor**](#laboratory-5-)
-6. [**Laboratory 6 & 7: Escrow**](#laboratory-6-&-7-)
+6. [**Laboratory 6 & 7: Escrow**](#laboratory-6--7-)
 7. [**Laboratory 8: Lottery**](#laboratory-8-)
 
 
