@@ -1,6 +1,6 @@
 #  ☄️C3 Comets Panța Robert☄️
 
-This repository contains TypeScript, Rust and Anchor scripts to interact with the Solana blockchain from the **[Solana Developer Program](https://cometsweb3.space/solana-c3)**.
+This repository contains TypeScript, Rust, and Anchor scripts for interacting with the Solana blockchain, developed as part of the **[Solana Developer Program](https://cometsweb3.space/solana-c3)**.
 
 ## Table of Contents 📑
 1. [**Laboratory 1: Transactions**](#laboratory-1-)
