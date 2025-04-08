@@ -1,8 +1,8 @@
 use anchor_lang::prelude::*;
 use anchor_spl::{
     associated_token::AssociatedToken,
-    token::{transfer_checked, TokenAccount, TransferChecked},
-    token_interface::{Mint, TokenInterface},
+    token::{transfer_checked, Token, TransferChecked},
+    token_interface::{Mint, TokenAccount,TokenInterface},
 };
 
 use crate::Offer;
@@ -90,14 +90,14 @@ pub struct MakeOffer<'info>{
     )]
 
     // Vault account (escrow) owned by the program for holding token A
-    pub maker_token_account_a: Account<'info, TokenAccount>,
+    pub maker_token_account_a: InterfaceAccount<'info, TokenAccount>,
     #[account(init, 
         payer = maker,
         associated_token::mint = token_mint_a,
         associated_token::authority = offer,
         associated_token::token_program = token_program,
     )]
-    pub vault: Account<'info, TokenAccount>,
+    pub vault: InterfaceAccount<'info, TokenAccount>,
 
     // Account storing the offer's data (PDA)
     #[account(init,
