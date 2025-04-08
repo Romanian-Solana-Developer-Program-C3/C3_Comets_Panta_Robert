@@ -52,4 +52,10 @@ Testing the Project:
 anchor test 
 ```
 
+Results of the tests are successfully:
+<p align="center">
+  <img src="lab6_7_tests.png" alt="Results: Tests" width="800">
+  <br>
+  <em>Results: Tests</em>
+</p>
 
