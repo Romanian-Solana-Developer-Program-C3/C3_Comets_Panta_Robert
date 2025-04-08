@@ -9,7 +9,7 @@ use crate::Offer;
 
 /// Handler called when User B (Taker) accepts an offer made by User A (Maker).
 /// Taker sends token B to the Maker and receives token A from the vault.
-pub fn handler(ctx: Context<TakeOffer>, id: u64) -> Result<()> {
+pub fn handler(ctx: Context<TakeOffer>, _id: u64) -> Result<()> {
     transfer_tokens_to_maker(&ctx)?;  // Transfer token B from Taker to Maker
     withdraw_from_vault(ctx)?;        // Transfer token A from vault to Taker
     Ok(())

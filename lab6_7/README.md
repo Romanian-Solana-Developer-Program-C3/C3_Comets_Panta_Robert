@@ -26,6 +26,12 @@ avm install 0.30.1
 avm use 0.30.1 
 ```
 
+**Yarn**
+```bash
+npm i -g yarn
+
+```
+
 ### 2. Running the Exercises ⚙️
 Start the Anchor framework using:
 ```bash

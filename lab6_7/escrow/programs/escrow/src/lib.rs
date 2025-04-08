@@ -18,7 +18,7 @@ pub mod escrow {  // Main module for the Escrow program
     use super::*;  // Bring in items from the other modules for use in this module
 
     // Handler for creating a new offer, which includes the offer details and token transfers
-    pub fn handler(
+    pub fn make_offer(
         ctx: Context<MakeOffer>,  // Context includes accounts involved in the offer
         id: u64,  // Offer ID
         token_a_amount: u64,  // Amount of token A in the offer
