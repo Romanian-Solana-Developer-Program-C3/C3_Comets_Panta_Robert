@@ -12,12 +12,17 @@ pub mod nft_staking {
 
     use super::*;
 
-    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        ctx.accounts.initialize_config()
+    pub fn initialize_config(
+        ctx: Context<InitializeConfig>, 
+        points_per_stake: u8, 
+        max_stake: u8, 
+        freeze_period: u32, 
+        bumps: InitializeConfigBumps) -> Result<()> {
+        ctx.accounts.initialize_config(points_per_stake, max_stake, freeze_period, bumps)
     }
 
-    pub fn initialize_user(ctx: Context<Initialize>) -> Result<()> {
-        ctx.accounts.initialize_user()
+    pub fn initialize_user(ctx: Context<InitializeUser>) -> Result<()> {
+        ctx.accounts.initialize_user(&ctx.bumps)
     }
 
     pub fn stake(ctx: Context<Stake>) -> Result<()> {
