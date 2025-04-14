@@ -26,7 +26,7 @@ pub mod nft_staking {
     }
 
     pub fn stake(ctx: Context<Stake>) -> Result<()> {
-        ctx.accounts.stake()
+        ctx.accounts.stake(&ctx.bumps)
     }
 
     pub fn unstake(ctx: Context<Unstake>) -> Result<()> {
