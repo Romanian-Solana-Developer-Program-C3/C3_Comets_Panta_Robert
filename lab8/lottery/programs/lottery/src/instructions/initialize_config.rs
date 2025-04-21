@@ -2,13 +2,14 @@ use anchor_lang::prelude::*;
 
 #[derive(Accounts)]
 
-pub struct InitializeConfig{
+pub struct InitializeConfig<'info>{
+    #[account(mut)]
     pub admin: Signer<'info>,
 
     #[account(
         init,
-        space = 8 + std::mem::size_of::<TokenLottery>(),
-        //seeds = [b"token_lottery".as_ref()],
+        space = 8 + TokenLottery::INITSPACE,
+        seeds = [b"token_lottery".as_ref(), admin.key().as_ref()],
         bump,
     )]
     pub token_lottery: Account<'info, TokenLottery>,
@@ -37,3 +38,5 @@ pub struct TokenLottery {
     pub end_time: u64,
     
 }
+
+// pub const TOKEN_LOTTERY_INITSPACE: usize = 8 + 80
