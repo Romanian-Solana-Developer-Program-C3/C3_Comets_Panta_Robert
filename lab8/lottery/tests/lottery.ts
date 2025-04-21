@@ -2,6 +2,7 @@ import * as anchor from "@coral-xyz/anchor";
 import { BN, Program } from "@coral-xyz/anchor";
 import { Lottery } from "../target/types/lottery";
 import { makeKeypairs } from "@solana-developers/helpers";
+import { getAssociatedTokenAddressSync } from "@solana/spl-token";
 
 
 
@@ -12,7 +13,21 @@ describe("lottery", () => {
   anchor.setProvider(anchor.AnchorProvider.env());
 
   const program = anchor.workspace.Lottery as Program<Lottery>;
-  const [alice] = makeKeypairs(1);
+  const [alice, tokenMint] = makeKeypairs(2);
+  
+
+  const aliceTokenAccount = getAssociatedTokenAddressSync(
+    tokenMint.publicKey,
+    alice.publicKey,
+    true,
+    program.programId
+  );
+
+//Initialize Mint
+//Initialize user token account
+//Mint tokens to alice token account
+//Initialize lottery
+//Buy ticket
 
   it("Is config initialized!", async () => {
     // Add your test here.

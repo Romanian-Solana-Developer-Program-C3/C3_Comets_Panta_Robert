@@ -6,19 +6,15 @@ use crate::{error::LotteryError, TokenLottery};
 #[derive(Accounts)]
 
 pub struct BuyTicket<'info> {
-    #[account(mut,
-        has_one = token_lottery,
-        seeds = [b"token_lottery".as_ref().token_mint.as_ref()],
-        bump =token.lottery.bump,
-    )]
+    #[account(mut)]
     pub user: Signer<'info>,
 
     #[account(mut)]
     pub user_token_account: Account<'info, TokenAccount>,
 
     #[account(mut,
-        seeds = [b"token_lottery".as_ref().token_mint.key().as_ref()],
-        bump =token.lottery.bump,
+        seeds = [b"token_lottery", token_mint.key().as_ref()],
+        bump =token_lottery.bump,
     )]
     pub token_lottery: Account<'info, TokenLottery>,
 
