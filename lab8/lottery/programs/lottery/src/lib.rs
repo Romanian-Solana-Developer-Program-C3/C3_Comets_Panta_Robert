@@ -17,8 +17,13 @@ declare_id!("mr3HyoZL1oEKhyKoaX9RH1M5EDhsJ2q6zWeh6Ei1e4C");
 pub mod lottery {
     use super::*; 
 
-    pub fn initialize_config(ctx: Context<InitializeConfig>) -> Result<()> {
-        instructions::initialize_config::handler(ctx)
+    pub fn initialize_config(
+        ctx: Context<InitializeConfig>, 
+        start_time: u64, 
+        end_time: u64, 
+        ticket_price: u64, 
+    ) -> Result<()> {
+        instructions::initialize_config::handler(ctx, start_time, end_time, ticket_price)
     }
 
     pub fn initialize_lottery(ctx: Context<InitializeLottery>) -> Result<()> {
