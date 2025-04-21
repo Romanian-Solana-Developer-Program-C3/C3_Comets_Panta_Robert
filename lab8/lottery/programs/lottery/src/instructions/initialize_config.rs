@@ -8,7 +8,7 @@ pub fn handler(
     ctx: Context<InitializeConfig>, 
     start_time: u64, 
     end_time: u64, 
-    ticket_price: u64, 
+    ticket_price: u64,
 ) -> Result<()> {
     let token_lottery = &mut ctx.accounts.token_lottery;
 
@@ -42,7 +42,8 @@ pub struct InitializeConfig<'info>{
     pub admin: Signer<'info>,
 
     #[account(init,
-        space = 8 + TokenLottery::INITSPACE,
+        payer = admin,
+        space = 8 + TokenLottery::INIT_SPACE,
         seeds = [b"token_lottery", token_mint.key().as_ref()],
         bump,
     )]

@@ -45,7 +45,7 @@ pub fn handler(ctx: Context<BuyTicket>) -> Result<()> {
     let cpi_ctx = CpiContext::new(
         ctx.accounts.token_program.to_account_info(), 
         Transfer {
-            from: ctx.accounts.user.to_account_info(),
+            from: ctx.accounts.user_token_account.to_account_info(),
             to: ctx.accounts.token_lottery_vault.to_account_info(),
             authority: ctx.accounts.user.to_account_info(),
         }

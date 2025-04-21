@@ -2,7 +2,8 @@ import * as anchor from "@coral-xyz/anchor";
 import { BN, Program } from "@coral-xyz/anchor";
 import { Lottery } from "../target/types/lottery";
 import { makeKeypairs } from "@solana-developers/helpers";
-import { getAssociatedTokenAddressSync } from "@solana/spl-token";
+import { createMint, getAssociatedTokenAddressSync, MINT_SIZE} from "@solana/spl-token";
+import { SystemProgram} from "@solana/web3.js";
 
 
 
@@ -23,6 +24,7 @@ describe("lottery", () => {
     program.programId
   );
 
+
 //Initialize Mint
 //Initialize user token account
 //Mint tokens to alice token account
@@ -31,6 +33,25 @@ describe("lottery", () => {
 
   it("Is config initialized!", async () => {
     // Add your test here.
+
+    let minimumLamports = await provider.connection.getMinimumBalanceForRentExemption(MINT_SIZE);
+
+    const tokenMintInstructions = SystemProgram.createAccount({
+      fromPubkey: wallet.publicKey,
+      newAccountPubkey: tokenMint.publicKey,
+      space: MINT_SIZE,
+      lamports: minimumLamports,
+      programId: program.programId,
+    });
+
+    const tokenMintInstructions2 = createMint(
+      provider.connection,
+      wallet.payer,
+      tokenMint.publicKey,
+      wallet.publicKey,
+      6
+    );
+
 
     const slot = await provider.connection.getSlot();
 
