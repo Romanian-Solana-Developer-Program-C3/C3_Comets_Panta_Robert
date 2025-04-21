@@ -5,10 +5,16 @@ pub fn handler(
     start_time: u64, 
     end_time: u64, 
     ticket_price: u64, 
-    reward_amount: u64,
-    tickets_number: u64
+    token_mint: Pubkey,
 ) -> Result<()> {
     let token_lottery = &mut ctx.accounts.token_lottery;
+
+
+msg!("Start time: {}", start_time);
+msg!("End time: {}", end_time);
+msg!("Ticket price: {}", ticket_price);
+
+
     token_lottery.set_inner(TokenLottery {
         admin: ctx.accounts.admin.key(),
         winner_chosen: false,
@@ -19,12 +25,14 @@ pub fn handler(
         tickets_num: 0,
         start_time,
         end_time,
+        token_mint,
     });
     Ok(())
 }
 
 
 #[derive(Accounts)]
+#[instruction(token_mint: Pubkey)]
 
 pub struct InitializeConfig<'info>{
     #[account(mut)]
@@ -32,7 +40,7 @@ pub struct InitializeConfig<'info>{
 
     #[account(init,
         space = 8 + TokenLottery::INITSPACE,
-        seeds = [b"token_lottery".as_ref()],
+        seeds = [b"token_lottery".as_ref().token_mint.as_ref()],
         bump,
     )]
     pub token_lottery: Account<'info, TokenLottery>,
@@ -55,6 +63,7 @@ pub struct TokenLottery {
     pub tickets_number: u64,
     pub start_time: u64,
     pub end_time: u64,
+    pub token_mint: Pubkey,
     
 }
 

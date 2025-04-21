@@ -12,12 +12,16 @@ describe("lottery", () => {
 
   it("Is config initialized!", async () => {
     // Add your test here.
+
+    const slot = await provider.connection.getSlot();
+
+
     const tx = await program.methods
-    .initializeConfig(new BN(0), new BN(10000), new BN(100))
+    .initializeConfig(new BN(0), new BN(slot +10), new BN(100))
     .accounts({
       admin: wallet.publicKey,
-      tokenLottery: tokenLottery.publicKey,
     })
+    .rpc();
     console.log("Your transaction signature", tx);
 
   });
