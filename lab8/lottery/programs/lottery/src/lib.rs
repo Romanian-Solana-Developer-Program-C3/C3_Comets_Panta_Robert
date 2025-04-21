@@ -22,8 +22,13 @@ pub mod lottery {
         start_time: u64, 
         end_time: u64, 
         ticket_price: u64, 
+        token_mint: Pubkey,
     ) -> Result<()> {
-        instructions::initialize_config::handler(ctx, start_time, end_time, ticket_price)
+        instructions::initialize_config::handler(
+            ctx, 
+            start_time, 
+            end_time, 
+            ticket_price)
     }
 
     pub fn initialize_lottery(ctx: Context<InitializeLottery>) -> Result<()> {
