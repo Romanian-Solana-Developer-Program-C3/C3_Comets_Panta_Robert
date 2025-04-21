@@ -1,6 +1,9 @@
 import * as anchor from "@coral-xyz/anchor";
-import { Program } from "@coral-xyz/anchor";
+import { BN, Program } from "@coral-xyz/anchor";
 import { Lottery } from "../target/types/lottery";
+import { makeKeypairs } from "@solana-developers/helpers";
+
+
 
 describe("lottery", () => {
   // Configure the client to use the local cluster.
@@ -9,6 +12,7 @@ describe("lottery", () => {
   anchor.setProvider(anchor.AnchorProvider.env());
 
   const program = anchor.workspace.Lottery as Program<Lottery>;
+  const [alice] = makeKeypairs(1);
 
   it("Is config initialized!", async () => {
     // Add your test here.

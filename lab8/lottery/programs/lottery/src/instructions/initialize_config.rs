@@ -43,7 +43,7 @@ pub struct InitializeConfig<'info>{
 
     #[account(init,
         space = 8 + TokenLottery::INITSPACE,
-        seeds = [b"token_lottery", token_mint.key()as_ref()],
+        seeds = [b"token_lottery", token_mint.key().as_ref()],
         bump,
     )]
     pub token_lottery: Account<'info, TokenLottery>,

@@ -39,9 +39,9 @@ pub mod lottery {
         instructions::buy_ticket::handler(ctx)
     }
 
-    pub fn commit_randomness(ctx: Context<CommitRandomness>) -> Result<()> {
-        instructions::commit_randomness::handler(ctx)
-    }
+    // pub fn commit_randomness(ctx: Context<CommitRandomness>) -> Result<()> {
+    //     instructions::commit_randomness::handler(ctx)
+    // }
 
     pub fn pick_winner(ctx: Context<PickWinner>) -> Result<()> {
         instructions::pick_winner::handler(ctx)

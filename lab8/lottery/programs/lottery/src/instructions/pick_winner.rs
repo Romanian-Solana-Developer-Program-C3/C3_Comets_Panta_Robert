@@ -10,14 +10,14 @@ pub struct PickWinner<'info>{
 pub fn handler(ctx: Context<PickWinner>) -> Result<()> {
     let clock = Clock::get()?;
 
-    let randomness_data = RandomnessAccountData::parse(ctx.accounts.randomness_account_data.data.borrow()).unwrap()?;
+    // let randomness_data = RandomnessAccountData::parse(ctx.accounts.randomness_account_data.data.borrow()).unwrap()?;
 
-    let revealed_random_value = randomness_data
-    .get_value(&clock)
-    .map_err(|_| LotteryError::RandomnessNotResolved)?;
+    // let revealed_random_value = randomness_data
+    // .get_value(&clock)
+    // .map_err(|_| LotteryError::RandomnessNotResolved)?;
 
-    let num_of_tickets = &mut ctx.accounts.token_lottery.tickets_num;
-    let winner_ticket = revealed_random_value(0) % num_of_tickets;
+    // let num_of_tickets = &mut ctx.accounts.token_lottery.tickets_num;
+    // let winner_ticket = revealed_random_value(0) % num_of_tickets;
 
     Ok(())
 }
