@@ -1,6 +1,6 @@
 use anchor_lang::prelude::*;
 
-use crate::state::{StakeConfig, UserAccount};
+use crate::state::{StakeUserConfig, StakeUserAccount};
 
 #[derive(Accounts)]
 pub struct Claim<'info> {}

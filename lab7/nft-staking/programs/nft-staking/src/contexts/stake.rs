@@ -1,5 +1,5 @@
 use anchor_lang::prelude::*;
-use anchor_spl::{metadata::{mpl_token_metadata::instructions::{FreezeDelegatedAccountCpi,FreezeDelegatedAccountCpiAccounts}, MasterEditionAccount, Metadata, MetadataAccount}, token::{TokenAccount, Token}, token_interface::Mint};
+use anchor_spl::{metadata::{mpl_token_metadata::instructions::{FreezeDelegatedAccountCpi,FreezeDelegatedAccountCpiAccounts}, MasterEditionAccount, Metadata, MetadataAccount}, token::{approve, Approve, TokenAccount, Token}, token_interface::Mint};
 
 use crate::state::{StakingConfig, StakeUserAccount, StakeUserConfig};
 
@@ -14,14 +14,14 @@ pub struct Stake<'info> {
 
     #[account(
         mut,
-        associated_token::mint = mint,
+        associated_token :: mint = mint,
         associated_token::authority = user,
     )]
-    mint_user_ata: Account<'info, TokenAccount>,
+    pub mint_user_ata: Account<'info, TokenAccount>,
 
     #[account(
         mut,
-        seeds = [b"metadata",metadata_program.key().as_ref(), mint.key().as_ref()],
+        seeds = [b"metadata", metadata_program.key().as_ref(), mint.key().as_ref()],
         seeds::program = metadata_program.key(),
         bump,
         constraint = metadata.collection.as_ref().unwrap().key.as_ref() == collection_mint.key().as_ref(),
@@ -31,8 +31,8 @@ pub struct Stake<'info> {
     #[account(
         seeds = [
             b"metadata",
-            metadata_program.key().as_ref(), 
-            mint.key().as_ref(), 
+            metadata_program.key().as_ref(),
+            mint.key().as_ref(),
             b"edition"
         ],
         seeds::program = metadata_program.key(),
@@ -41,16 +41,16 @@ pub struct Stake<'info> {
     pub edition: Account<'info, MasterEditionAccount>,
 
     #[account(
-        seeds = [b"config".as_ref()],
-        bump,
+        seeds = [b"stake_config".as_ref()],
+        bump = config.bump,
     )]
-    pub config: Account<'info, StakingConfig>,
+    pub config: Account<'info, StakeConfig>,
 
     #[account(
         init,
         payer = user,
         space = 8 + StakeUserAccount::INIT_SPACE,
-        seeds = [b"stake".as_ref(),mint.key().as_ref(), config.key().as_ref()],
+        seeds = [b"stake".as_ref(), mint.key().as_ref(), config.key().as_ref()],
         bump,
     )]
     pub stake_account: Account<'info, StakeUserAccount>,
@@ -63,10 +63,10 @@ pub struct Stake<'info> {
     pub user_account: Account<'info, StakeUserConfig>,
 
     pub system_program: Program<'info, System>,
+
     pub token_program: Program<'info, Token>,
 
-    pub metadata_program: Program<'info, Metadata>
-
+    pub metadata_program: Program<'info, Metadata>,
 }
 
 impl<'info> Stake<'info> {
@@ -109,7 +109,7 @@ impl<'info> Stake<'info> {
         let token_program = &self.token_program.to_account_info();
         let metadata_program = &self.metadata_program.to_account_info();
 
-        FreezeDelegatedAccountCpi::new{
+        FreezeDelegatedAccountCpi::new(
             metadata_program, 
             FreezeDelegatedAccountCpiAccounts{
                 delegate,
@@ -118,7 +118,7 @@ impl<'info> Stake<'info> {
                 mint,
                 token_program
             },
-        }.invoke_signed(signer_seeds)?;
+        ).invoke_signed(signer_seeds)?;
         
         self.user_account.amount_staked += 1;
 
