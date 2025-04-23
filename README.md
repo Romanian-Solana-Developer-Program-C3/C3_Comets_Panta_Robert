@@ -184,3 +184,30 @@ This Solana-based program enables users to stake their NFTs and earn rewards in 
 ## Laboratory 8 🎰
 ### Lottery
 
+This section focuses on building a decentralized lottery application on the Solana blockchain using Anchor, a framework that simplifies Solana program development. The lottery program demonstrates how to initialize and configure a lottery, allow users to buy tickets, pick a winner, and claim rewards. The program utilizes smart contracts to manage token transactions, ensure secure interactions, and implement a random winner selection process.
+
+### Commands 🛠️
+- **Build the Program** 🚀
+  ```sh
+  anchor build
+  ```
+
+- **Run Unit Tests** 🧪
+  ```sh
+  anchor test  
+  ```
+  
+### Solana Lottery Program Using Anchor 🌟
+This program allows users to participate in a blockchain-based lottery by buying tickets with a token of their choice. The smart contract manages the lottery’s configuration, including the start and end times, ticket price, and reward amount. After purchasing a ticket, users can later claim their prizes, and the program ensures that the lottery operates securely and transparently.
+
+### Key Features 🔑
+- **Secure Ticket Purchases:** The program ensures that ticket purchases can only be made within the set time frame, ensuring fairness and preventing out-of-time transactions.
+
+- **Random Winner Selection:** The program aims to implement a randomness mechanism (currently commented out) for choosing a winner, ensuring a fair and transparent selection process.
+
+- **Token Integration:** The lottery program uses Solana SPL tokens for purchasing tickets and storing funds in a vault. Tokens are securely transferred between users and the lottery account.
+
+- **Personalized Configurations:** The lottery's configuration, such as start time, end time, and ticket price, can be set by the admin, offering flexibility for different lottery types.
+
+- **Prize Claiming:** Once the winner is selected, they can claim their prize through a secure process, ensuring a seamless user experience.
+
