@@ -1,9 +1,9 @@
 use anchor_lang::prelude::*;
 
 #[derive(Accounts)]
-pub struct Unstake<'info> {}
+pub struct Unstake {}
 
-impl<'info> Unstake<'info> {
+impl<'info> Unstake {
     pub fn unstake(&mut self) -> Result<()> {
         Ok(())
     }
