@@ -150,6 +150,37 @@ This Solana-based program allows users to create escrow offers for token swaps, 
 ## Laboratory 7 ⏳
 ### NFT Vesting
 
+This section focuses on building an NFT staking program on the Solana blockchain using the Anchor framework. The program enables users to stake NFTs from a verified collection to earn rewards. It securely manages metadata validation, token freezing, and account state using PDAs and CPIs, ensuring a safe and transparent staking experience.
+
+### Commands 🛠️
+- **Build the Program** 🚀
+  ```sh
+  anchor build
+  ```
+
+- **Run Unit Tests** 🧪
+  ```sh
+  anchor test  
+  ```
+
+### NFT Staking Program Using Anchor 🌟
+This Solana-based program enables users to stake their NFTs and earn rewards in a secure, on-chain manner. Built using the Anchor framework, the application leverages metadata validation and token freezing to ensure authenticity, ownership, and immutability during the staking period.
+
+### Key Features 🔑
+- **NFT-Based Staking:** Users can stake NFTs from a verified collection to earn points and future rewards. This incentivizes NFT holding and engagement within a collection.
+
+- **Metadata Validation & Collection Check:** Only NFTs from a specific collection are allowed for staking, verified through the on-chain metadata and master edition accounts, ensuring authenticity and consistency.
+
+- **Token Freezing via CPI:** Once staked, the NFT is frozen using a Cross Program Invocation (CPI) to the Token Metadata Program, preventing transfers and guaranteeing that the NFT remains staked for the duration.
+
+- **Staking Configuration Control:** Admins can initialize configurable parameters such as rewards per stake, max NFTs per user, and freeze periods using a global config account.
+
+- **User Tracking & Rewards:** Each user has an individual config account tracking staking points and total NFTs staked, allowing personalized reward systems and gamification potential.
+
+- **Secure Account Derivation with PDAs:** All staking, user, and config accounts are securely derived using Program Derived Addresses (PDAs), ensuring unique and tamper-proof account linkage.
+
+- **Extensible Claim & Unstake Logic:** While currently minimal, the program includes hooks for future development of claiming rewards and unstaking, enabling future expansion into token payouts or dynamic point conversion.
+
 ## Laboratory 8 🎰
 ### Lottery
 
